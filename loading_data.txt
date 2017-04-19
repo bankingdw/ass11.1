@@ -1,0 +1,9 @@
+Table Creation
+CREATE TABLE IF NOT EXISTS olympic(athlete string,age int,country string,year string,closing_date string,sport string,
+gold int,silver int,bronze int,total int)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '\t'
+STORED AS TEXTFILE;
+
+Loading Data
+LOAD DATA LOCAL INPATH '/home/acadgild/Downloads/olympic_data.csv' OVERWRITE INTO TABLE olympic;

@@ -1,0 +1,3 @@
+Number of medals that India won year wise
+
+SELECT year,SUM(total) from olympic WHERE COUNTRY=="India" GROUP BY year;
